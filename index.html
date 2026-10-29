@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<!-- Демо-версия сайта «Рэд Хаус» (Москва, Кетчерская ул., 13, стр. 2), не для публикации. Тексты, цены и фото взяты с Яндекс Карт. -->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Рэд Хаус — баня, бассейн, бильярд и караоке в Новогиреево</title>
+<meta name="description" content="Рэд Хаус: дом с русской парной на дровах, бассейном с подогревом, бильярдом и караоке. Москва, Кетчерская ул., 13, стр. 2. Круглосуточно, 3 000 ₽ в час до 6 гостей.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='22' y='6' width='4' height='9' fill='%237d1f19'/%3E%3Cpath d='M2 16L16 3.5L30 16Z' fill='%237d1f19'/%3E%3Crect x='5' y='15' width='22' height='14' fill='%23c8362b'/%3E%3Crect x='12' y='19' width='8' height='7' fill='%23f0a94a'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Рэд Хаус — баня, бассейн, бильярд и караоке">
+<meta property="og:description" content="Дом целиком для вашей компании: парная на дровах, бассейн с подогревом, бильярд и караоке. Круглосуточно, Москва, Кетчерская ул., 13, стр. 2.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;0,700;1,500&family=Onest:wght@400;500;600&display=swap">
+<style>
+/* Layout: sticky bar; hero = headline left and a drawn red house right; zones alternate art and text rows with menu-style price lines; one package panel; split contacts. */
+:root {
+  color-scheme: dark;
+  --black: #000000;
+  --surface: #130e0c;
+  --ink: #f4ece5;
+  --ink-soft: #b5a69b;
+  --rule: #2c2220;
+  --dots: #5a4a44;
+  --brick: #c8362b;
+  --brick-hi: #dc4a3d;
+  --brick-deep: #7d1f19;
+  --ember: #f0a94a;
+  --open: #4cc97a;
+  --field: #1a1311;
+  --field-line: #3d2f2a;
+  --ok-bg: #0d1712;
+  --ok-line: #2c4d38;
+  --display: "Cormorant", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body: "Onest", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --radius: 14px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+img { max-width: 100%; height: auto; }
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 30;
+  background: var(--black);
+}
+svg { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; }
+h1, h2, h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+p, figure, dl, dd { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+.wrap {
+  width: 100%;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 760px) {
+  .wrap {
+    padding-left: max(32px, env(safe-area-inset-left, 0px));
+    padding-right: max(32px, env(safe-area-inset-right, 0px));
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 30px;
+  border-radius: 999px;
+  border: 1px solid var(--brick);
+  background: var(--brick);
+  color: #ffffff;
+  font-family: var(--body);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color .2s, border-color .2s;
+}
+.btn:hover { background: var(--brick-hi); border-color: var(--brick-hi); }
+.btn--ghost { background: transparent; border-color: #4b3b36; color: var(--ink); }
+.btn--ghost:hover { background: transparent; border-color: var(--ink); }
+.btn--sm { min-height: 42px; padding: 0 20px; font-size: .95rem; }
+
+/* Top bar */
+.bar {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 20;
+  background: var(--black);
+  border-bottom: 1px solid var(--rule);
+}
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1;
+  text-decoration: none;
+}
+.brand svg { width: 30px; height: 30px; flex: none; }
+.nav { display: none; gap: 32px; }
+.nav a { color: var(--ink-soft); font-weight: 500; font-size: .96rem; text-decoration: none; }
+.nav a:hover { color: var(--ink); }
+@media (min-width: 900px) { .nav { display: flex; } }
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(48px, 8vw, 104px) clamp(64px, 9vw, 120px);
+}
+.hero .wrap {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .hero .wrap { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 56px; }
+}
+.hero h1 { font-size: clamp(3.2rem, 8.4vw, 6.4rem); font-weight: 700; line-height: .95; }
+.hero .lead { margin-top: 24px; max-width: 44ch; font-size: 1.2rem; color: var(--ink-soft); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.hero-art { justify-self: center; width: 100%; max-width: 520px; }
+.hero-art svg { width: 100%; height: auto; }
+.glow {
+  position: absolute;
+  right: -12%;
+  bottom: -35%;
+  width: min(90vw, 980px);
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(200, 54, 43, .30), transparent 62%);
+  pointer-events: none;
+}
+.mist { position: absolute; inset: 0; pointer-events: none; }
+.mist i {
+  position: absolute;
+  bottom: -18%;
+  width: min(40vw, 440px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 238, 226, .10), transparent 66%);
+  filter: blur(28px);
+  opacity: .7;
+}
+.mist i:nth-child(1) { left: 4%; }
+.mist i:nth-child(2) { left: 36%; }
+.mist i:nth-child(3) { left: 68%; }
+@media (prefers-reduced-motion: no-preference) {
+  .mist i { animation: rise 26s linear infinite; animation-delay: -6s; }
+  .mist i:nth-child(2) { animation-duration: 32s; animation-delay: -14s; }
+  .mist i:nth-child(3) { animation-duration: 29s; animation-delay: -21s; }
+}
+@keyframes rise {
+  0% { transform: translateY(0) scale(.9); opacity: 0; }
+  15% { opacity: .8; }
+  100% { transform: translateY(-115%) scale(1.35); opacity: 0; }
+}
+
+/* Sections */
+.section { padding-block: clamp(64px, 9vw, 120px); }
+.section--ruled { border-top: 1px solid var(--rule); }
+.head { display: grid; gap: 16px; max-width: 60ch; margin-bottom: clamp(40px, 6vw, 72px); }
+.head h2 { font-size: clamp(2.4rem, 5.6vw, 4rem); font-weight: 700; }
+.head p { max-width: 48ch; font-size: 1.12rem; color: var(--ink-soft); }
+
+/* Zones */
+.zones { display: grid; gap: clamp(56px, 8vw, 96px); }
+.zone {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+  scroll-margin-top: calc(env(safe-area-inset-top, 0px) + 88px);
+}
+@media (min-width: 860px) {
+  .zone { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 64px; }
+  .zone--flip .art { order: 2; }
+}
+.art {
+  aspect-ratio: 15 / 11;
+  max-width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--black);
+}
+.art svg { width: 100%; height: 100%; }
+.zone h3 { font-size: clamp(2.2rem, 4.4vw, 3.2rem); font-weight: 700; }
+.zone .about { margin-top: 12px; max-width: 42ch; color: var(--ink-soft); }
+.prices { display: grid; gap: 14px; margin-top: 28px; }
+.price {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(12px, 1fr) auto;
+  align-items: start;
+  column-gap: 12px;
+}
+.price .n { font-weight: 500; }
+.price .n small { display: block; font-size: .88rem; font-weight: 400; color: var(--ink-soft); }
+.price .d { height: 1.15em; border-bottom: 1px dotted var(--dots); }
+.price .v { font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.price .v small { font-size: .88rem; font-weight: 400; color: var(--ink-soft); }
+.fine { margin-top: clamp(40px, 6vw, 64px); max-width: 56ch; font-size: .92rem; color: var(--ink-soft); }
+
+/* Package */
+.package {
+  display: grid;
+  gap: 32px;
+  padding: clamp(28px, 5vw, 64px);
+  border: 1px solid #5a2520;
+  border-radius: 20px;
+  background: radial-gradient(120% 140% at 100% 0%, rgba(200, 54, 43, .22), transparent 55%), var(--surface);
+  scroll-margin-top: calc(env(safe-area-inset-top, 0px) + 88px);
+}
+@media (min-width: 860px) {
+  .package { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 64px; align-items: center; }
+}
+.package h2 { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 700; }
+.package .about { margin-top: 12px; max-width: 44ch; color: var(--ink-soft); }
+.includes { margin-top: 24px; }
+.includes li { padding: 12px 0; border-top: 1px solid var(--rule); }
+.includes li:last-child { border-bottom: 1px solid var(--rule); }
+.deal { display: grid; gap: 10px; justify-items: start; }
+.deal .sum { font-family: var(--display); font-weight: 700; font-size: clamp(3.4rem, 8vw, 5.5rem); line-height: 1; }
+.deal .sum small { margin-left: .1em; font-size: .5em; }
+.deal .per { color: var(--ink-soft); }
+.deal .btn { margin-top: 14px; }
+
+/* Contacts */
+.contact { display: grid; gap: 40px; scroll-margin-top: calc(env(safe-area-inset-top, 0px) + 88px); }
+@media (min-width: 860px) {
+  .contact { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: start; }
+}
+.contact h2 { font-size: clamp(2.4rem, 5.6vw, 4rem); font-weight: 700; }
+.contact .about { margin-top: 16px; max-width: 40ch; font-size: 1.12rem; color: var(--ink-soft); }
+.contact .actions { margin-top: 28px; }
+.facts div { display: grid; gap: 4px; padding: 20px 0; border-top: 1px solid var(--rule); }
+.facts div:last-child { border-bottom: 1px solid var(--rule); }
+.facts dt { font-size: .9rem; color: var(--ink-soft); }
+.facts dd { font-size: 1.2rem; font-weight: 500; }
+.facts .phone {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4.4vw, 2.8rem);
+  line-height: 1.1;
+  text-decoration: none;
+}
+.facts .phone:hover { color: var(--brick-hi); }
+
+/* Footer */
+.foot { padding-block: 36px; border-top: 1px solid var(--rule); font-size: .92rem; color: var(--ink-soft); }
+.foot-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+.made { display: inline-flex; align-items: center; gap: 8px; }
+.made svg { width: 14px; height: 14px; flex: none; }
+
+/* Shared additions */
+[hidden] { display: none !important; }
+html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 84px); }
+.btn { cursor: pointer; }
+.bar .btn { display: none; }
+@media (min-width: 760px) { .bar .btn { display: inline-flex; } }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.linkish { padding: 0; border: 0; background: none; color: var(--ink); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.linkish:hover { color: var(--ember); }
+
+/* Open status */
+.status { display: flex; align-items: center; gap: 10px; font-size: .95rem; color: var(--ink-soft); }
+.status i { width: 9px; height: 9px; flex: none; border-radius: 50%; background: var(--dots); }
+.status.is-open { color: var(--ink); }
+.status.is-open i { background: var(--open); box-shadow: 0 0 0 4px rgba(76, 201, 122, .2); }
+.hero .status { margin-top: 28px; }
+.facts .status { margin-top: 6px; font-size: .92rem; font-weight: 400; }
+.ext { text-decoration: underline; text-underline-offset: 4px; }
+.ext:hover { color: var(--ember); }
+
+/* Package actions */
+.deal-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
+.deal .deal-actions .btn { margin-top: 0; }
+
+/* Calculator */
+.calc { display: grid; gap: 32px; align-items: start; }
+@media (min-width: 960px) { .calc { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 56px; } }
+.calc-form { display: grid; gap: 32px; min-width: 0; }
+.group { display: grid; min-width: 0; margin: 0; padding: 0; border: 0; }
+.group legend, .stepper label { display: block; margin-bottom: 12px; padding: 0; font-size: .95rem; font-weight: 500; color: var(--ink-soft); }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { position: relative; display: inline-flex; }
+.chip input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+.chip span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid var(--field-line);
+  border-radius: 999px;
+  background: var(--field);
+  font-size: .98rem;
+  font-weight: 500;
+  transition: background-color .2s, border-color .2s, color .2s;
+}
+.chip:hover span { border-color: var(--ink-soft); }
+.chip input:checked + span { background: var(--ink); border-color: var(--ink); color: var(--black); }
+.chip input:focus-visible + span { outline: 2px solid var(--ember); outline-offset: 3px; }
+.steppers { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px; }
+.stepper { min-width: 0; }
+.step {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr) 50px;
+  align-items: center;
+  height: 52px;
+  border: 1px solid var(--field-line);
+  border-radius: 12px;
+  background: var(--field);
+  overflow: hidden;
+}
+.step button { height: 100%; border: 0; background: transparent; color: var(--ink); font: inherit; font-size: 1.4rem; line-height: 1; cursor: pointer; }
+.step button:hover { background: var(--rule); }
+.step input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.step input::-webkit-outer-spin-button,
+.step input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.switch { position: relative; display: inline-flex; align-items: center; gap: 14px; font-weight: 500; cursor: pointer; }
+.switch input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.switch .track { position: relative; flex: none; width: 52px; height: 30px; border-radius: 999px; background: var(--field-line); transition: background-color .2s; }
+.switch .track::after { content: ""; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: var(--ink); transition: transform .2s; }
+.switch input:checked + .track { background: var(--brick); }
+.switch input:checked + .track::after { transform: translateX(22px); }
+.switch input:focus-visible + .track { outline: 2px solid var(--ember); outline-offset: 3px; }
+
+.bill {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+  padding: clamp(24px, 4vw, 36px);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  background: var(--surface);
+}
+@media (min-width: 960px) { .bill { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 92px); } }
+.bill h3 { font-size: 2rem; font-weight: 700; }
+.bill-lines li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.bill-lines li:first-child { border-top: 1px solid var(--rule); }
+.bill-lines li span:first-child { min-width: 0; }
+.bill-lines li span:last-child { white-space: nowrap; font-weight: 600; font-variant-numeric: tabular-nums; }
+.bill-lines .gift span:last-child { color: var(--ember); }
+.bill-lines .empty { color: var(--ink-soft); }
+.hint { font-size: .95rem; color: var(--ember); }
+.bill-total { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 16px; }
+.bill-total span { color: var(--ink-soft); }
+.bill-total strong { font-family: var(--display); font-size: clamp(2.6rem, 6vw, 3.4rem); font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.bill .btn { width: 100%; }
+.bill .fine { margin-top: 0; }
+
+/* Booking */
+.form { display: grid; gap: 18px; margin-top: 32px; }
+.row3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 18px; }
+.field { display: grid; gap: 8px; min-width: 0; }
+.field label { font-size: .95rem; font-weight: 500; color: var(--ink-soft); }
+.field input, .field select, .field textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 12px 14px;
+  border: 1px solid var(--field-line);
+  border-radius: 12px;
+  background: var(--field);
+  color: var(--ink);
+  font: inherit;
+}
+.field textarea { min-height: 96px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--ember); }
+.field [aria-invalid="true"] { border-color: var(--brick-hi); }
+.attached { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; padding: 14px 16px; border: 1px dashed var(--field-line); border-radius: 12px; font-size: .95rem; }
+.attached span { min-width: 0; }
+.form-error { color: var(--brick-hi); font-size: .95rem; }
+.form .btn { justify-self: start; }
+.result { display: grid; gap: 14px; margin-top: 28px; padding: clamp(20px, 4vw, 28px); border: 1px solid var(--ok-line); border-radius: 16px; background: var(--ok-bg); }
+.result h3 { font-size: 1.8rem; font-weight: 700; }
+.result p { color: var(--ink-soft); }
+.result textarea { width: 100%; min-height: 170px; padding: 12px 14px; border: 1px solid var(--ok-line); border-radius: 12px; background: var(--black); color: var(--ink); font: inherit; font-size: .95rem; resize: vertical; }
+.result .actions { margin-top: 0; }
+
+/* Phone booking bar */
+.mbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 25;
+  display: flex;
+  gap: 10px;
+  padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  background: var(--black);
+  border-top: 1px solid var(--rule);
+}
+.mbar .btn { flex: 1; min-height: 48px; padding: 0 12px; }
+@media (max-width: 759px) { body { padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px)); } }
+@media (min-width: 760px) { .mbar { display: none; } }
+
+/* Watermarks */
+.made-badge {
+  position: fixed;
+  z-index: 25;
+  left: calc(20px + env(safe-area-inset-left, 0px));
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, .75);
+  font-size: .82rem;
+  color: var(--ink-soft);
+}
+.made-badge svg { width: 14px; height: 14px; flex: none; }
+@media (min-width: 760px) { .made-badge { display: inline-flex; } }
+.consent { display: flex; align-items: flex-start; gap: 12px; font-size: .92rem; color: var(--ink-soft); cursor: pointer; }
+.consent input { flex: none; width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--brick); }
+.consent input[aria-invalid="true"] { outline: 2px solid var(--brick-hi); outline-offset: 2px; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.btn:disabled { opacity: .6; cursor: progress; }
+.demo-mark { position: fixed; inset: 0; z-index: 40; width: 100%; height: 100%; max-width: none; pointer-events: none; }
+
+/* Demo strip */
+.demo-top { padding: 8px 16px; background: var(--brick-deep); color: #ffffff; font-size: .9rem; line-height: 1.4; text-align: center; }
+
+/* Hero facts */
+.hero-facts { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 28px; color: var(--ink-soft); }
+.hero-facts b { color: var(--ink); font-weight: 600; }
+.hero-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 28px; }
+.hero .hero-meta .status { margin-top: 0; }
+.rating { display: inline-flex; align-items: center; gap: 8px; font-size: .95rem; color: var(--ink-soft); text-decoration: none; }
+.rating b { color: var(--ember); font-weight: 600; }
+.rating:hover { color: var(--ink); }
+.bar .btn { font-variant-numeric: tabular-nums; }
+
+/* Included in rent */
+.price .v.inc { color: var(--ember); font-weight: 500; }
+.extras { margin-top: clamp(40px, 6vw, 64px); max-width: 680px; }
+.extras h3 { font-size: clamp(1.9rem, 3.6vw, 2.4rem); font-weight: 700; }
+.extras .prices { margin-top: 20px; }
+
+/* Photos */
+.gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.ph { position: relative; overflow: hidden; border-radius: var(--radius); background: var(--surface); aspect-ratio: 3 / 2; }
+.ph:first-child, .ph:last-child { grid-column: 1 / -1; }
+@media (min-width: 860px) {
+  .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .ph:first-child { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+  .ph:last-child { grid-column: auto; }
+}
+.ph img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ph figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 14px 12px; background: linear-gradient(transparent, rgba(0, 0, 0, .7)); font-size: .92rem; font-weight: 500; }
+.ph-tag { position: absolute; top: 10px; right: 10px; padding: 2px 9px; border-radius: 999px; background: rgba(0, 0, 0, .55); color: rgba(255, 255, 255, .78); font-size: .72rem; letter-spacing: .06em; pointer-events: none; }
+
+/* Honest bill */
+.calc-note { font-size: .95rem; color: var(--ink-soft); }
+.calc-note b { color: var(--ink); font-weight: 500; }
+.bill-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+.stamp { padding: 4px 12px; border: 2px solid var(--brick-hi); border-radius: 6px; color: var(--brick-hi); font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; transform: rotate(-6deg); opacity: .9; }
+.bill-lines .tag { display: inline-block; margin-left: 6px; padding: 0 7px; border-radius: 999px; background: var(--brick-deep); color: #ffffff; font-size: .74rem; font-weight: 500; vertical-align: 1px; }
+.bill-lines .free span:last-child { color: var(--ember); }
+.bill .btn + .btn { margin-top: -6px; }
+
+/* Guests say */
+.reviews { display: grid; gap: 40px; }
+@media (min-width: 860px) { .reviews { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; } }
+.reviews h2 { font-size: clamp(2.4rem, 5.6vw, 4rem); font-weight: 700; }
+.score { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin-top: 20px; color: var(--ink-soft); }
+.score b { font-family: var(--display); font-size: 4rem; font-weight: 700; line-height: 1; color: var(--ink); }
+.reviews .about { margin-top: 16px; max-width: 44ch; font-size: 1.08rem; color: var(--ink-soft); }
+.reviews .ext { display: inline-block; margin-top: 20px; }
+.aspects li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px 16px; padding: 16px 0; border-top: 1px solid var(--rule); }
+.aspects li:last-child { border-bottom: 1px solid var(--rule); }
+.aspects b { font-weight: 600; font-variant-numeric: tabular-nums; }
+.aspects i { grid-column: 1 / -1; height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--brick) var(--p), var(--field-line) var(--p)); }
+.aspects-note { margin-top: 12px; font-size: .88rem; color: var(--ink-soft); }
+
+/* Contacts */
+.facts dd small { display: block; margin-top: 4px; font-size: .92rem; font-weight: 400; color: var(--ink-soft); }
+.result .actions .btn { flex: 1 1 auto; }
+
+/* Demo footer */
+.demo-note { margin-top: 16px; max-width: 70ch; }
+
+/* Owner notes (?owner=1) */
+.owner { position: fixed; z-index: 45; right: 16px; bottom: 16px; width: min(400px, calc(100vw - 32px)); max-height: calc(100vh - 140px); overflow: auto; padding: 20px 22px; border: 1px solid var(--ember); border-radius: 16px; background: #140f0c; box-shadow: 0 20px 60px rgba(0, 0, 0, .6); font-size: .95rem; line-height: 1.5; }
+@media (max-width: 759px) { .owner { bottom: calc(82px + env(safe-area-inset-bottom, 0px)); } }
+.owner h2 { padding-right: 32px; font-family: var(--body); font-size: 1.05rem; font-weight: 600; letter-spacing: 0; color: var(--ember); }
+.owner ol { display: grid; gap: 10px; margin: 12px 0 0; padding-left: 20px; color: var(--ink-soft); }
+.owner b { color: var(--ink); font-weight: 600; }
+.owner-close { position: absolute; top: 10px; right: 10px; width: 34px; height: 34px; border: 0; border-radius: 50%; background: var(--rule); color: var(--ink); font-size: 1.2rem; line-height: 1; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<div class="demo-top">Демо-версия нового сайта Рэд Хаус</div>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Рэд Хаус, в начало страницы">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="22" y="6" width="4" height="9" fill="#7d1f19"/>
+        <path d="M2 16L16 3.5L30 16Z" fill="#7d1f19"/>
+        <rect x="5" y="15" width="22" height="14" fill="#c8362b"/>
+        <rect x="12" y="19" width="8" height="7" fill="#f0a94a"/>
+      </svg>
+      Рэд Хаус
+    </a>
+    <nav class="nav" aria-label="Разделы сайта">
+      <a href="#zones">Дом</a>
+      <a href="#prices">Цены</a>
+      <a href="#photos">Фото</a>
+      <a href="#calc">Расчёт</a>
+      <a href="#booking">Контакты</a>
+    </nav>
+    <a class="btn btn--sm" href="tel:+74953751500">+7 (495) 375-15-00</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="glow"></div>
+    <div class="mist" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="wrap">
+      <div>
+        <h1>Весь вечер под одной крышей</h1>
+        <p class="lead">Русская парная на дровах, бассейн с подогревом, бильярд и караоке. Дом сдаётся целиком — только вашей компании.</p>
+        <ul class="hero-facts">
+          <li><b>3&nbsp;000&nbsp;₽</b> в час до 6 гостей</li>
+          <li><b>от 4 часов</b></li>
+          <li><b>дети до 8 лет</b> бесплатно</li>
+        </ul>
+        <div class="actions">
+          <a class="btn" href="tel:+74953751500">Позвонить</a>
+          <a class="btn btn--ghost" href="#calc">Посчитать вечер</a>
+        </div>
+        <div class="hero-meta">
+          <p class="status is-open"><i></i><span>Открыто круглосуточно</span></p>
+          <a class="rating" href="https://yandex.ru/maps/org/red_khaus/1013809439/reviews/" target="_blank" rel="noopener"><b>★ 4,3</b> 212 оценок на Яндекс Картах</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 520 460" role="img" aria-label="Красный дом с тёплым светом в окнах и дымом из трубы">
+          <defs>
+            <pattern id="hs-brick" width="48" height="24" patternUnits="userSpaceOnUse">
+              <path d="M0 .5H48M0 12.5H48M.5 0V12M24.5 12V24" stroke="#000" stroke-opacity=".26" fill="none"/>
+            </pattern>
+            <radialGradient id="hs-glow">
+              <stop offset="0" stop-color="#f0a94a" stop-opacity=".6"/>
+              <stop offset="1" stop-color="#f0a94a" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="hs-roof" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#8d2820"/>
+              <stop offset="1" stop-color="#651611"/>
+            </linearGradient>
+            <linearGradient id="hs-lit" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffd69a"/>
+              <stop offset="1" stop-color="#f0a94a"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="260" cy="436" rx="215" ry="12" fill="#c8362b" fill-opacity=".16"/>
+          <g fill="none" stroke="#f4ece5" stroke-linecap="round">
+            <path d="M347 90C320 70 374 54 348 34C334 20 352 12 348 6" stroke-width="7" stroke-opacity=".30"/>
+            <path d="M358 92C386 72 342 58 368 38C380 26 364 18 368 10" stroke-width="5" stroke-opacity=".20"/>
+            <path d="M338 92C318 78 346 66 330 52" stroke-width="4" stroke-opacity=".16"/>
+          </g>
+          <rect x="326" y="104" width="40" height="90" fill="#8a251e"/>
+          <rect x="326" y="104" width="40" height="90" fill="url(#hs-brick)"/>
+          <rect x="320" y="96" width="52" height="12" rx="2" fill="#5a1511"/>
+          <rect x="104" y="236" width="312" height="196" fill="#b3302a"/>
+          <rect x="104" y="236" width="312" height="196" fill="url(#hs-brick)"/>
+          <polygon points="70,246 260,92 450,246" fill="url(#hs-roof)" stroke="#4d100c" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="104" y="246" width="312" height="14" fill="#000" opacity=".25"/>
+          <circle cx="260" cy="178" r="80" fill="url(#hs-glow)"/>
+          <circle cx="175" cy="329" r="95" fill="url(#hs-glow)"/>
+          <circle cx="345" cy="329" r="95" fill="url(#hs-glow)"/>
+          <circle cx="260" cy="178" r="26" fill="url(#hs-lit)"/>
+          <circle cx="260" cy="178" r="26" fill="none" stroke="#4d100c" stroke-width="6"/>
+          <path d="M260 152V204M234 178H286" stroke="#4d100c" stroke-width="4"/>
+          <rect x="140" y="290" width="70" height="78" fill="url(#hs-lit)"/>
+          <rect x="140" y="290" width="70" height="78" fill="none" stroke="#4d100c" stroke-width="6"/>
+          <path d="M175 290V368M140 329H210" stroke="#4d100c" stroke-width="4"/>
+          <rect x="134" y="368" width="82" height="8" fill="#5a1511"/>
+          <rect x="310" y="290" width="70" height="78" fill="url(#hs-lit)"/>
+          <rect x="310" y="290" width="70" height="78" fill="none" stroke="#4d100c" stroke-width="6"/>
+          <path d="M345 290V368M310 329H380" stroke="#4d100c" stroke-width="4"/>
+          <rect x="304" y="368" width="82" height="8" fill="#5a1511"/>
+          <path d="M236 432V362a24 24 0 0 1 48 0V432Z" fill="#2a0b09" stroke="#5a1511" stroke-width="4"/>
+          <circle cx="274" cy="398" r="3.5" fill="#f0a94a"/>
+          <rect x="222" y="432" width="76" height="8" rx="2" fill="#3a1814"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ruled" id="zones">
+    <div class="wrap">
+      <div class="head">
+        <h2>Что внутри дома</h2>
+        <p>Всё входит в аренду: пока дом ваш, пользуйтесь любой комнатой.</p>
+      </div>
+
+      <div class="zones">
+
+        <article class="zone" id="sauna">
+          <figure class="art">
+            <svg viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Сауна: деревянные полки, каменка, веник и песочные часы">
+              <defs>
+                <pattern id="sa-planks" width="600" height="44" patternUnits="userSpaceOnUse">
+                  <rect width="600" height="44" fill="#6b3d22"/>
+                  <rect width="600" height="20" fill="#7a4929" opacity=".7"/>
+                  <rect y="41" width="600" height="3" fill="#24120a" opacity=".7"/>
+                </pattern>
+                <radialGradient id="sa-lamp">
+                  <stop offset="0" stop-color="#ffc66d" stop-opacity=".75"/>
+                  <stop offset="1" stop-color="#ffc66d" stop-opacity="0"/>
+                </radialGradient>
+                <radialGradient id="sa-fire">
+                  <stop offset="0" stop-color="#ff7a3c" stop-opacity=".7"/>
+                  <stop offset="1" stop-color="#ff7a3c" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="sa-shade" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#000" stop-opacity="0"/>
+                  <stop offset="1" stop-color="#000" stop-opacity=".55"/>
+                </linearGradient>
+              </defs>
+              <rect width="600" height="440" fill="url(#sa-planks)"/>
+              <rect width="600" height="440" fill="url(#sa-shade)"/>
+              <circle cx="104" cy="92" r="190" fill="url(#sa-lamp)"/>
+              <rect x="88" y="76" width="32" height="34" rx="5" fill="#ffcf80"/>
+              <path d="M96 79V107M104 79V107M112 79V107" stroke="#2a1409" stroke-width="3"/>
+              <g transform="translate(250 0)">
+                <path d="M0 0V46" stroke="#c9a36a" stroke-width="2"/>
+                <rect x="-9" y="44" width="18" height="9" rx="2" fill="#c8362b"/>
+                <path d="M-9 52C-26 72-30 112-14 142C-6 156 6 156 14 142C30 112 26 72 9 52Z" fill="#44662f"/>
+                <path d="M0 56V150M-8 70L0 84M8 70L0 84M-12 96L0 110M12 96L0 110M-9 122L0 134M9 122L0 134" stroke="#2b4420" stroke-width="2" fill="none" stroke-linecap="round"/>
+              </g>
+              <g transform="translate(372 112)">
+                <path d="M-15 6V62M15 6V62" stroke="#2a1409" stroke-width="3"/>
+                <polygon points="-13,6 13,6 0,34" fill="#e8c88a"/>
+                <polygon points="0,48 -11,62 11,62" fill="#e8c88a"/>
+                <path d="M0 34V48" stroke="#e8c88a" stroke-width="1.5"/>
+                <polygon points="-13,6 13,6 2,34 13,62 -13,62 -2,34" fill="#fff" fill-opacity=".08" stroke="#fff" stroke-opacity=".35"/>
+                <rect x="-18" y="0" width="36" height="6" rx="2" fill="#2a1409"/>
+                <rect x="-18" y="62" width="36" height="6" rx="2" fill="#2a1409"/>
+              </g>
+              <rect y="196" width="600" height="20" fill="#b88650"/>
+              <rect y="196" width="600" height="2" fill="#e0b27a" opacity=".6"/>
+              <rect y="216" width="600" height="14" fill="#7d4f2b"/>
+              <rect y="230" width="600" height="44" fill="#000" opacity=".38"/>
+              <rect y="300" width="600" height="18" fill="#b88650"/>
+              <rect y="300" width="600" height="2" fill="#e0b27a" opacity=".6"/>
+              <rect y="318" width="600" height="12" fill="#7d4f2b"/>
+              <rect y="330" width="600" height="62" fill="#000" opacity=".42"/>
+              <rect y="392" width="600" height="48" fill="#3b2113"/>
+              <rect y="392" width="600" height="3" fill="#000" opacity=".5"/>
+              <circle cx="506" cy="336" r="120" fill="url(#sa-fire)"/>
+              <rect x="444" y="338" width="124" height="56" rx="7" fill="#1c1512"/>
+              <rect x="464" y="352" width="84" height="30" rx="3" fill="#0e0908"/>
+              <rect x="468" y="356" width="76" height="22" rx="2" fill="#ff7a3c" opacity=".85"/>
+              <path d="M482 356V378M498 356V378M514 356V378M530 356V378" stroke="#0e0908" stroke-width="3"/>
+              <ellipse cx="506" cy="326" rx="60" ry="14" fill="#ff7a3c" opacity=".5"/>
+              <g>
+                <ellipse cx="458" cy="328" rx="15" ry="11" fill="#4b423d"/>
+                <ellipse cx="484" cy="329" rx="14" ry="11" fill="#5b514b"/>
+                <ellipse cx="510" cy="328" rx="15" ry="11" fill="#3a322e"/>
+                <ellipse cx="536" cy="329" rx="14" ry="11" fill="#5b514b"/>
+                <ellipse cx="558" cy="330" rx="11" ry="9" fill="#4b423d"/>
+                <ellipse cx="470" cy="313" rx="14" ry="10" fill="#5b514b"/>
+                <ellipse cx="498" cy="312" rx="14" ry="10" fill="#4b423d"/>
+                <ellipse cx="526" cy="313" rx="14" ry="10" fill="#3a322e"/>
+              </g>
+              <g fill="none" stroke="#ffecd2" stroke-opacity=".28" stroke-width="2.5" stroke-linecap="round">
+                <path d="M474 296q12-16 0-32t0-32"/>
+                <path d="M506 292q-12-16 0-32t0-32"/>
+                <path d="M538 296q12-16 0-32t0-32"/>
+              </g>
+            </svg>
+          </figure>
+          <div>
+            <h3>Русская парная</h3>
+            <p class="about">Печь на дровах и деревянные полки. Для парной готовят чан с травами и аромамаслами.</p>
+            <ul class="prices">
+              <li class="price"><span class="n">Парная на дровах</span><span class="d" aria-hidden="true"></span><span class="v inc">входит</span></li>
+              <li class="price"><span class="n">Травы и аромамасла <small>обязательно к счёту</small></span><span class="d" aria-hidden="true"></span><span class="v">600&nbsp;₽</span></li>
+              <li class="price"><span class="n">Веники дубовые</span><span class="d" aria-hidden="true"></span><span class="v">1&nbsp;200&nbsp;₽</span></li>
+              <li class="price"><span class="n">Банщик-массажист</span><span class="d" aria-hidden="true"></span><span class="v">по запросу</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="zone zone--flip" id="pool">
+          <figure class="art">
+            <svg viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Бассейн, вид сверху: вода, плитка и лестница">
+              <defs>
+                <linearGradient id="pl-water" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#2aa3b0"/>
+                  <stop offset="1" stop-color="#0b5468"/>
+                </linearGradient>
+                <clipPath id="pl-clip"><rect x="72" y="76" width="456" height="288" rx="14"/></clipPath>
+                <pattern id="pl-tiles" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M40 0H0V40" fill="none" stroke="#000" stroke-opacity=".3"/>
+                </pattern>
+              </defs>
+              <rect width="600" height="440" fill="#1d1816"/>
+              <rect width="600" height="440" fill="url(#pl-tiles)"/>
+              <rect x="52" y="56" width="496" height="328" rx="26" fill="#3d322d"/>
+              <rect x="72" y="76" width="456" height="288" rx="14" fill="url(#pl-water)"/>
+              <rect x="72" y="76" width="456" height="288" fill="url(#pl-tiles)" opacity=".5"/>
+              <g clip-path="url(#pl-clip)" fill="none" stroke="#e9fbff" stroke-opacity=".24" stroke-width="2.4" stroke-linecap="round">
+                <path d="M60 120q57-26 114 0t114 0t114 0t114 0t114 0"/>
+                <path d="M30 168q57 22 114 0t114 0t114 0t114 0t114 0t114 0"/>
+                <path d="M90 214q57-24 114 0t114 0t114 0t114 0t114 0"/>
+                <path d="M40 262q57 26 114 0t114 0t114 0t114 0t114 0t114 0"/>
+                <path d="M80 310q57-22 114 0t114 0t114 0t114 0t114 0"/>
+              </g>
+              <polygon points="120,76 250,76 150,364 72,364 72,300" fill="#fff" opacity=".05"/>
+              <g stroke="#dfe7ea" stroke-linecap="round" fill="none">
+                <path d="M473 38V114M491 38V114" stroke-width="4"/>
+                <path d="M473 88H491M473 104H491" stroke-width="3"/>
+              </g>
+              <path d="M476 40V114M494 40V114" stroke="#000" stroke-opacity=".22" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </figure>
+          <div>
+            <h3>Бассейн</h3>
+            <p class="about">Фигурный бассейн с подогретой водой — после парной в самый раз. Гости хвалят его чаще всего.</p>
+            <ul class="prices">
+              <li class="price"><span class="n">Бассейн с подогревом</span><span class="d" aria-hidden="true"></span><span class="v inc">входит</span></li>
+              <li class="price"><span class="n">Гидромассаж и подсветка</span><span class="d" aria-hidden="true"></span><span class="v inc">входит</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="zone" id="billiards">
+          <figure class="art">
+            <svg viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Бильярдный стол, вид сверху: пирамида шаров и кий">
+              <defs>
+                <linearGradient id="bl-wood" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#6e3b20"/>
+                  <stop offset="1" stop-color="#3d1f11"/>
+                </linearGradient>
+                <radialGradient id="bl-felt" cx="50%" cy="45%" r="70%">
+                  <stop offset="0" stop-color="#1f7253"/>
+                  <stop offset="1" stop-color="#0c3a2a"/>
+                </radialGradient>
+                <g id="bl-ball">
+                  <circle cx="2.5" cy="3.5" r="12.5" fill="#000" opacity=".3"/>
+                  <circle r="12.5" style="fill:var(--c)"/>
+                  <circle cx="-4" cy="-4.5" r="3.6" fill="#fff" opacity=".38"/>
+                </g>
+              </defs>
+              <rect width="600" height="440" fill="#0e0807"/>
+              <rect x="36" y="46" width="528" height="348" rx="24" fill="url(#bl-wood)"/>
+              <rect x="68" y="78" width="464" height="284" rx="6" fill="url(#bl-felt)"/>
+              <rect x="68" y="78" width="464" height="284" rx="6" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="4"/>
+              <g fill="#050201">
+                <circle cx="68" cy="78" r="17"/>
+                <circle cx="532" cy="78" r="17"/>
+                <circle cx="68" cy="362" r="17"/>
+                <circle cx="532" cy="362" r="17"/>
+                <circle cx="300" cy="76" r="17"/>
+                <circle cx="300" cy="364" r="17"/>
+              </g>
+              <path fill="#efe6d8" fill-opacity=".6" d="M127.5 58l4 4-4 4-4-4zM185 58l4 4-4 4-4-4zM242.5 58l4 4-4 4-4-4zM357.5 58l4 4-4 4-4-4zM415 58l4 4-4 4-4-4zM472.5 58l4 4-4 4-4-4zM127.5 374l4 4-4 4-4-4zM185 374l4 4-4 4-4-4zM242.5 374l4 4-4 4-4-4zM357.5 374l4 4-4 4-4-4zM415 374l4 4-4 4-4-4zM472.5 374l4 4-4 4-4-4zM52 146l4 4-4 4-4-4zM52 216l4 4-4 4-4-4zM52 286l4 4-4 4-4-4zM548 146l4 4-4 4-4-4zM548 216l4 4-4 4-4-4zM548 286l4 4-4 4-4-4z"/>
+              <rect x="322" y="371" width="14" height="14" rx="2" fill="#3b78b5"/>
+              <rect x="322" y="371" width="14" height="5" rx="2" fill="#fff" opacity=".25"/>
+              <use href="#bl-ball" x="390" y="220" style="--c:#c8362b"/>
+              <use href="#bl-ball" x="412.5" y="207" style="--c:#f0a94a"/>
+              <use href="#bl-ball" x="412.5" y="233" style="--c:#efe6d8"/>
+              <use href="#bl-ball" x="435" y="194" style="--c:#3b78b5"/>
+              <use href="#bl-ball" x="435" y="220" style="--c:#7a1f1a"/>
+              <use href="#bl-ball" x="435" y="246" style="--c:#f0a94a"/>
+              <use href="#bl-ball" x="457.5" y="181" style="--c:#efe6d8"/>
+              <use href="#bl-ball" x="457.5" y="207" style="--c:#c8362b"/>
+              <use href="#bl-ball" x="457.5" y="233" style="--c:#3b78b5"/>
+              <use href="#bl-ball" x="457.5" y="259" style="--c:#f0a94a"/>
+              <use href="#bl-ball" x="480" y="168" style="--c:#7a1f1a"/>
+              <use href="#bl-ball" x="480" y="194" style="--c:#efe6d8"/>
+              <use href="#bl-ball" x="480" y="220" style="--c:#3b78b5"/>
+              <use href="#bl-ball" x="480" y="246" style="--c:#c8362b"/>
+              <use href="#bl-ball" x="480" y="272" style="--c:#f0a94a"/>
+              <polygon points="175,219.4 175,222.6 14,256.5 14,247.5" fill="#d9b27a"/>
+              <circle cx="175" cy="221" r="2.2" fill="#3b78b5"/>
+              <use href="#bl-ball" x="190" y="220" style="--c:#fbf6ee"/>
+            </svg>
+          </figure>
+          <div>
+            <h3>Бильярд</h3>
+            <p class="about">Стол для русского бильярда в общей комнате. Пока одни в парной, другие разыгрывают партию.</p>
+            <ul class="prices">
+              <li class="price"><span class="n">Стол русского бильярда</span><span class="d" aria-hidden="true"></span><span class="v inc">входит</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="zone zone--flip" id="karaoke">
+          <figure class="art">
+            <svg viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Караоке: микрофон на стойке, экран с текстом песни, колонка и свет прожекторов">
+              <defs>
+                <radialGradient id="kr-bg" cx="50%" cy="30%" r="80%">
+                  <stop offset="0" stop-color="#3a1418"/>
+                  <stop offset="1" stop-color="#0d0506"/>
+                </radialGradient>
+                <linearGradient id="kr-beam" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#ffd69a" stop-opacity=".34"/>
+                  <stop offset="1" stop-color="#ffd69a" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="kr-beam2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#ff5a4a" stop-opacity=".3"/>
+                  <stop offset="1" stop-color="#ff5a4a" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="kr-metal" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#6d6461"/>
+                  <stop offset=".5" stop-color="#d9d0cb"/>
+                  <stop offset="1" stop-color="#6d6461"/>
+                </linearGradient>
+                <pattern id="kr-mesh" width="6" height="6" patternUnits="userSpaceOnUse">
+                  <path d="M0 0L6 6M6 0L0 6" stroke="#3a3330" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <rect width="600" height="440" fill="url(#kr-bg)"/>
+              <polygon points="150,0 182,0 340,440 30,440" fill="url(#kr-beam)"/>
+              <polygon points="428,0 456,0 580,440 300,440" fill="url(#kr-beam2)"/>
+              <rect x="146" y="0" width="40" height="16" rx="3" fill="#2a1a17"/>
+              <rect x="424" y="0" width="36" height="16" rx="3" fill="#2a1a17"/>
+              <rect x="56" y="64" width="236" height="146" rx="8" fill="#120a0b" stroke="#3d2f2a" stroke-width="4"/>
+              <rect x="80" y="104" width="160" height="10" rx="5" fill="#f4ece5" fill-opacity=".8"/>
+              <rect x="80" y="104" width="96" height="10" rx="5" fill="#f0a94a"/>
+              <rect x="80" y="130" width="188" height="10" rx="5" fill="#f4ece5" fill-opacity=".45"/>
+              <rect x="80" y="156" width="124" height="10" rx="5" fill="#f4ece5" fill-opacity=".3"/>
+              <circle cx="80" cy="186" r="5" fill="#c8362b"/>
+              <circle cx="96" cy="186" r="5" fill="#c8362b" fill-opacity=".5"/>
+              <circle cx="112" cy="186" r="5" fill="#c8362b" fill-opacity=".25"/>
+              <rect y="400" width="600" height="40" fill="#1a0b0c"/>
+              <path d="M0 400H600" stroke="#c8362b" stroke-opacity=".5" stroke-width="2"/>
+              <ellipse cx="300" cy="402" rx="120" ry="10" fill="#000" opacity=".5"/>
+              <rect x="430" y="206" width="112" height="194" rx="10" fill="#1c1513" stroke="#3a2e2a" stroke-width="3"/>
+              <circle cx="486" cy="248" r="20" fill="#0b0807" stroke="#4b3b36" stroke-width="4"/>
+              <circle cx="486" cy="248" r="7" fill="#2a201d"/>
+              <circle cx="486" cy="330" r="42" fill="#0b0807" stroke="#4b3b36" stroke-width="5"/>
+              <circle cx="486" cy="330" r="17" fill="#2a201d"/>
+              <circle cx="486" cy="386" r="3" fill="#4cc97a"/>
+              <path d="M262 400L300 368L338 400" stroke="#8d8480" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M300 400V204" stroke="url(#kr-metal)" stroke-width="8"/>
+              <rect x="292" y="198" width="16" height="12" rx="3" fill="#3a3330"/>
+              <g transform="translate(260 156) rotate(-38)">
+                <rect x="-9" y="0" width="18" height="58" rx="7" fill="#2b2220"/>
+                <rect x="-11" y="-6" width="22" height="10" rx="3" fill="#c8362b"/>
+                <circle cx="0" cy="-26" r="24" fill="#a39a95"/>
+                <circle cx="0" cy="-26" r="24" fill="url(#kr-mesh)"/>
+                <ellipse cx="-8" cy="-35" rx="7" ry="5" fill="#fff" opacity=".35"/>
+              </g>
+              <g fill="#f0a94a">
+                <path d="M372 132V84L408 76V122" fill="none" stroke="#f0a94a" stroke-width="5" stroke-linejoin="round"/>
+                <ellipse cx="363" cy="133" rx="11" ry="8" transform="rotate(-18 363 133)"/>
+                <ellipse cx="399" cy="124" rx="11" ry="8" transform="rotate(-18 399 124)"/>
+              </g>
+              <g fill="#dc4a3d">
+                <path d="M352 210V172" stroke="#dc4a3d" stroke-width="4"/>
+                <path d="M352 172q14 4 16 18" fill="none" stroke="#dc4a3d" stroke-width="4" stroke-linecap="round"/>
+                <ellipse cx="344" cy="211" rx="9" ry="7" transform="rotate(-18 344 211)"/>
+              </g>
+            </svg>
+          </figure>
+          <div>
+            <h3>Караоке и стол</h3>
+            <p class="about">Комната отдыха с большим столом, караоке и колонкой для своей музыки. Здесь отмечают дни рождения — в доме до 20 мест.</p>
+            <ul class="prices">
+              <li class="price"><span class="n">Караоке</span><span class="d" aria-hidden="true"></span><span class="v inc">входит</span></li>
+              <li class="price"><span class="n">Комната отдыха с большим столом</span><span class="d" aria-hidden="true"></span><span class="v inc">входит</span></li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ruled">
+    <div class="wrap">
+      <div class="package" id="prices">
+        <div>
+          <h2>Сколько стоит</h2>
+          <p class="about">Дом сдаётся целиком. Платите за время, а не за каждую комнату.</p>
+          <ul class="includes">
+            <li>Минимальный заказ — 4 часа</li>
+            <li>До 6 гостей без доплаты, дальше — 300&nbsp;₽ с человека</li>
+            <li>Дети до 8 лет — бесплатно</li>
+            <li>В доме до 20 мест</li>
+            <li>Оплата: предоплата, наличные, банковский перевод</li>
+          </ul>
+        </div>
+        <div class="deal">
+          <p class="sum">3&nbsp;000&nbsp;₽<small>/ч</small></p>
+          <p class="per">до 6 гостей · 4 часа = 12&nbsp;000&nbsp;₽</p>
+          <div class="deal-actions">
+            <a class="btn" href="#calc">Посчитать свой вечер</a>
+            <a class="btn btn--ghost" href="tel:+74953751500">Позвонить</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="extras">
+        <h3>Дополнительно</h3>
+        <ul class="prices">
+          <li class="price"><span class="n">Травы и аромамасла для парной <small>обязательно к счёту, один раз за визит</small></span><span class="d" aria-hidden="true"></span><span class="v">600&nbsp;₽</span></li>
+          <li class="price"><span class="n">Комплект <small>тапочки, простынь, полотенце</small></span><span class="d" aria-hidden="true"></span><span class="v">1&nbsp;300&nbsp;₽</span></li>
+          <li class="price"><span class="n">Веники дубовые</span><span class="d" aria-hidden="true"></span><span class="v">1&nbsp;200&nbsp;₽</span></li>
+          <li class="price"><span class="n">Банщик-массажист</span><span class="d" aria-hidden="true"></span><span class="v">по запросу</span></li>
+        </ul>
+      </div>
+      <p class="fine">Цены и состав услуг — с Яндекс Карт, могут отличаться. Точную сумму и свободное время подскажет администратор.</p>
+    </div>
+  </section>
+
+  <section class="section section--ruled" id="photos">
+    <div class="wrap">
+      <div class="head">
+        <h2>Дом на фото</h2>
+        <p>Да, внутри он правда красный.</p>
+      </div>
+      <div class="gallery">
+        <figure class="ph">
+          <img src="https://avatars.mds.yandex.net/get-altay/1637232/2a0000016e6e1416048f7c910d1d8fe78444/XXL" alt="Комната отдыха с красными диванами и накрытым столом" loading="lazy" referrerpolicy="no-referrer">
+          <span class="ph-tag">демо</span>
+          <figcaption>Комната отдыха</figcaption>
+        </figure>
+        <figure class="ph">
+          <img src="https://avatars.mds.yandex.net/get-altay/1880508/2a0000016e6e1edf12d9c39f8c9f2fd51572/XL" alt="Бассейн с красной мозаикой на стенах" loading="lazy" referrerpolicy="no-referrer">
+          <span class="ph-tag">демо</span>
+          <figcaption>Бассейн</figcaption>
+        </figure>
+        <figure class="ph">
+          <img src="https://avatars.mds.yandex.net/get-altay/1546239/2a0000016e6e2980dc3af70f5d641b73bddc/XL" alt="Бильярдный стол в общей комнате" loading="lazy" referrerpolicy="no-referrer">
+          <span class="ph-tag">демо</span>
+          <figcaption>Бильярд</figcaption>
+        </figure>
+        <figure class="ph">
+          <img src="https://avatars.mds.yandex.net/get-altay/1696029/2a0000016e6e22a5cc0c3555cfb573a1b2e4/XL" alt="Бассейн с синей подсветкой" loading="lazy" referrerpolicy="no-referrer">
+          <span class="ph-tag">демо</span>
+          <figcaption>Бассейн с подсветкой</figcaption>
+        </figure>
+        <figure class="ph">
+          <img src="https://avatars.mds.yandex.net/get-altay/1583511/2a0000016e6e170ba1847c2b7392e9ffd132/XL" alt="Стол со свечами и цветами, экран на стене" loading="lazy" referrerpolicy="no-referrer">
+          <span class="ph-tag">демо</span>
+          <figcaption>Стол и экран</figcaption>
+        </figure>
+        <figure class="ph">
+          <img src="https://avatars.mds.yandex.net/get-altay/2068435/2a0000016e6e13bcb06dbc8789ae699d63af/XL" alt="Большой красный диван вокруг накрытого стола" loading="lazy" referrerpolicy="no-referrer">
+          <span class="ph-tag">демо</span>
+          <figcaption>Стол на компанию</figcaption>
+        </figure>
+      </div>
+      <p class="fine">Фото — с Яндекс Карт.</p>
+    </div>
+  </section>
+
+  <section class="section section--ruled" id="calc">
+    <div class="wrap">
+      <div class="head">
+        <h2>Честный счёт</h2>
+        <p>Посчитайте вечер до звонка. Сумма видна сразу — вместе с обязательными позициями.</p>
+      </div>
+      <div class="calc">
+        <form class="calc-form" id="calc-form" novalidate>
+          <div class="steppers">
+            <div class="stepper">
+              <label for="c-hours">Сколько часов</label>
+              <div class="step">
+                <button type="button" data-for="c-hours" data-step="-1" aria-label="Меньше часов">−</button>
+                <input type="number" id="c-hours" min="4" max="12" value="4" inputmode="numeric">
+                <button type="button" data-for="c-hours" data-step="1" aria-label="Больше часов">+</button>
+              </div>
+            </div>
+            <div class="stepper">
+              <label for="c-guests">Взрослых гостей</label>
+              <div class="step">
+                <button type="button" data-for="c-guests" data-step="-1" aria-label="Меньше взрослых">−</button>
+                <input type="number" id="c-guests" min="1" max="20" value="6" inputmode="numeric">
+                <button type="button" data-for="c-guests" data-step="1" aria-label="Больше взрослых">+</button>
+              </div>
+            </div>
+            <div class="stepper">
+              <label for="c-kids">Детей до 8 лет</label>
+              <div class="step">
+                <button type="button" data-for="c-kids" data-step="-1" aria-label="Меньше детей">−</button>
+                <input type="number" id="c-kids" min="0" max="10" value="0" inputmode="numeric">
+                <button type="button" data-for="c-kids" data-step="1" aria-label="Больше детей">+</button>
+              </div>
+            </div>
+          </div>
+
+          <fieldset class="group">
+            <legend>Дополнительно</legend>
+            <div class="steppers">
+              <div class="stepper">
+                <label for="c-kits">Комплекты: тапочки, простынь, полотенце</label>
+                <div class="step">
+                  <button type="button" data-for="c-kits" data-step="-1" aria-label="Меньше комплектов">−</button>
+                  <input type="number" id="c-kits" min="0" max="20" value="0" inputmode="numeric">
+                  <button type="button" data-for="c-kits" data-step="1" aria-label="Больше комплектов">+</button>
+                </div>
+              </div>
+              <div class="stepper">
+                <label for="c-brooms">Веники дубовые</label>
+                <div class="step">
+                  <button type="button" data-for="c-brooms" data-step="-1" aria-label="Меньше веников">−</button>
+                  <input type="number" id="c-brooms" min="0" max="10" value="0" inputmode="numeric">
+                  <button type="button" data-for="c-brooms" data-step="1" aria-label="Больше веников">+</button>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <p class="calc-note"><b>Травы и аромамасла для парной (600&nbsp;₽)</b> уже в счёте — по правилам дома они обязательны. Дети до 8 лет в доме бесплатно.</p>
+        </form>
+
+        <aside class="bill" aria-labelledby="bill-title">
+          <div class="bill-head">
+            <h3 id="bill-title">Ваш вечер</h3>
+            <span class="stamp">Демо-расчёт</span>
+          </div>
+          <ul class="bill-lines" id="bill-lines">
+            <li><span>Аренда дома, 4 часа × 3&nbsp;000&nbsp;₽</span><span>12&nbsp;000&nbsp;₽</span></li>
+            <li><span>Травы и аромамасла для парной</span><span>600&nbsp;₽</span></li>
+          </ul>
+          <p class="hint" id="bill-hint" aria-live="polite">Примерно 2&nbsp;100&nbsp;₽ с каждого взрослого.</p>
+          <div class="bill-total"><span>Итого</span><strong id="bill-total">12&nbsp;600&nbsp;₽</strong></div>
+          <a class="btn" href="tel:+74953751500">Позвонить и забронировать</a>
+          <a class="btn btn--ghost" href="#booking" id="bill-book">Добавить расчёт в заявку</a>
+          <p class="fine">Еда, напитки и другие услуги — отдельно. Доплата за гостей сверх шести посчитана за каждый час — уточните у администратора.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ruled" id="reviews">
+    <div class="wrap">
+      <div class="reviews">
+        <div>
+          <h2>Что отмечают гости</h2>
+          <p class="score"><b>4,3</b><span>из 5 · 212 оценок и 87 отзывов на Яндекс Картах</span></p>
+          <p class="about">Чаще всего хвалят большой тёплый бассейн и жаркую парную на дровах. Сюда приходят отмечать дни рождения большими компаниями, бывают и с детьми.</p>
+          <a class="ext" href="https://yandex.ru/maps/org/red_khaus/1013809439/reviews/" target="_blank" rel="noopener">Читать отзывы на Яндекс Картах</a>
+        </div>
+        <div>
+          <ul class="aspects">
+            <li><span>Атмосфера</span><b>92%</b><i style="--p:92%"></i></li>
+            <li><span>Бассейн</span><b>89%</b><i style="--p:89%"></i></li>
+            <li><span>Отдых</span><b>80%</b><i style="--p:80%"></i></li>
+            <li><span>Впечатления</span><b>77%</b><i style="--p:77%"></i></li>
+          </ul>
+          <p class="aspects-note">Доля положительных упоминаний в отзывах, по данным Яндекс Карт.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ruled">
+    <div class="wrap">
+      <div class="contact" id="booking">
+        <div>
+          <h2>Бронирование</h2>
+          <p class="about">Оставьте заявку — администратор перезвонит и подтвердит время. Или позвоните сами: дом работает круглосуточно.</p>
+
+          <form class="form" id="booking-form" novalidate>
+            <div class="field">
+              <label for="b-name">Как к вам обращаться</label>
+              <input id="b-name" name="name" type="text" autocomplete="name" placeholder="Имя" required>
+            </div>
+            <div class="field">
+              <label for="b-phone">Телефон</label>
+              <input id="b-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 900 000-00-00" required>
+            </div>
+            <div class="row3">
+              <div class="field">
+                <label for="b-date">Дата</label>
+                <input id="b-date" name="date" type="date" required>
+              </div>
+              <div class="field">
+                <label for="b-time">Время</label>
+                <select id="b-time" name="time"></select>
+              </div>
+              <div class="field">
+                <label for="b-guests">Гостей</label>
+                <input id="b-guests" name="guests" type="number" min="1" max="20" value="6" inputmode="numeric">
+              </div>
+            </div>
+            <div class="attached" id="b-calc" hidden>
+              <span id="b-calc-text"></span>
+              <button type="button" class="linkish" id="b-calc-remove">Убрать расчёт</button>
+            </div>
+            <div class="field">
+              <label for="b-comment">Пожелания</label>
+              <textarea id="b-comment" name="comment" rows="3" placeholder="Например, отмечаем день рождения"></textarea>
+            </div>
+            <label class="consent" for="b-consent">
+              <input type="checkbox" id="b-consent" name="consent" value="yes">
+              <span>Соглашаюсь на обработку моего имени и телефона, чтобы со мной связались по поводу брони.</span>
+            </label>
+            <p class="form-error" id="b-error" role="alert" hidden></p>
+            <button class="btn" type="submit">Отправить заявку</button>
+          </form>
+
+          <div class="result" id="b-result" role="status" hidden>
+            <h3>Заявка готова</h3>
+            <p>Это демо-версия, поэтому заявка никуда не ушла. На рабочем сайте она сразу придёт администратору — в Telegram или на почту. А пока забронировать можно по телефону.</p>
+            <textarea id="b-result-text" readonly aria-label="Текст заявки"></textarea>
+            <div class="actions">
+              <a class="btn" href="tel:+74953751500">Позвонить</a>
+              <button class="btn btn--ghost" type="button" id="b-copy">Скопировать заявку</button>
+            </div>
+          </div>
+        </div>
+
+        <dl class="facts">
+          <div>
+            <dt>Телефон</dt>
+            <dd><a class="phone" href="tel:+74953751500">+7 (495) 375-15-00</a></dd>
+          </div>
+          <div>
+            <dt>Адрес</dt>
+            <dd>Москва, Кетчерская ул., 13, стр. 2<small>м. Новогиреево — 2,3 км, остановка «Реутовская улица» — 460 м</small></dd>
+          </div>
+          <div>
+            <dt>Часы работы</dt>
+            <dd>Круглосуточно<span class="status is-open"><i></i><span>Открыто сейчас</span></span></dd>
+          </div>
+          <div>
+            <dt>Удобства</dt>
+            <dd>Парковка, Wi-Fi<small>Оплата: предоплата, наличные, банковский перевод</small></dd>
+          </div>
+          <div>
+            <dt>Яндекс Карты</dt>
+            <dd><a class="ext" href="https://yandex.ru/maps/org/red_khaus/1013809439/" target="_blank" rel="noopener">Маршрут и входы на карте</a><small>Вход в строение 2 лучше посмотреть на карте заранее</small></dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-row">
+      <span>Рэд Хаус · баня, бассейн, бильярд и караоке</span>
+      <span class="made">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5L14.5 7.5H12.5V14.5H3.5V7.5H1.5Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        Сайт сделан на заказ
+      </span>
+    </div>
+    <p class="demo-note">Это демо-версия нового сайта. Тексты, цены и фото взяты с Яндекс Карт и могут отличаться от актуальных.</p>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn" href="tel:+74953751500">Позвонить</a>
+  <a class="btn btn--ghost" href="https://yandex.ru/maps/org/red_khaus/1013809439/" target="_blank" rel="noopener">Маршрут</a>
+</div>
+
+<aside class="owner" id="owner" aria-labelledby="owner-title" hidden>
+  <button class="owner-close" type="button" id="owner-close" aria-label="Скрыть заметки">×</button>
+  <h2 id="owner-title">Заметки для владельца</h2>
+  <ol>
+    <li><b>Главная жалоба в отзывах — неожиданные доплаты.</b> Гостям называют одну сумму, а на выходе появляются комплекты, обязательные позиции и сборы. «Честный счёт» показывает все платные позиции до звонка, и гость приезжает, уже зная сумму.</li>
+    <li><b>Сильные стороны по оценкам Яндекса:</b> атмосфера — 92% положительных, бассейн — 89%. На них сделан упор. Персонал набирает только 49%: сайт снимает часть телефонных вопросов про цены, правила и вход.</li>
+    <li><b>Гости жалуются, что трудно найти вход</b> (промзона, строение 2). Поэтому на мобильном снизу есть кнопка «Маршрут», а в контактах — подсказка.</li>
+    <li><b>Для рабочей версии нужно:</b> актуальные цены, правила про свои напитки и сборы, мобильный номер для WhatsApp или Telegram, куда присылать заявки, свежие фото парной.</li>
+  </ol>
+</aside>
+
+<!-- Демо-знак: убрать этот блок после оплаты -->
+<svg class="demo-mark" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="demo-tile" width="640" height="360" patternUnits="userSpaceOnUse" patternTransform="rotate(-22)">
+      <g fill="#ffffff" fill-opacity=".05" font-family="Onest, Arial, sans-serif" font-weight="700" font-size="30" letter-spacing="3">
+        <text x="16" y="100">ДЕМО-ВЕРСИЯ</text>
+        <text x="336" y="280">ДЕМО-ВЕРСИЯ</text>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#demo-tile)"/>
+</svg>
+
+<script>
+(() => {
+  // Настройки сайта: телефон и цены (с Яндекс Карт)
+  const CONFIG = {
+    timeZone: 'Europe/Moscow',
+    phone: '+7 (495) 375-15-00',
+    price: {
+      hour: 3000,        // аренда дома в час, до 6 гостей
+      baseGuests: 6,
+      extraGuest: 300,   // с гостя сверх шести, считаем за каждый час
+      aroma: 600,        // травы и аромамасла: обязательно к счёту
+      kit: 1300,         // комплект: тапочки, простынь, полотенце
+      broom: 1200,       // веник дубовый
+      seats: 20          // мест в доме
+    }
+  };
+  const P = CONFIG.price;
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const byId = id => document.getElementById(id);
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, Number.isFinite(v) ? v : a));
+  const money = n => new Intl.NumberFormat('ru-RU').format(n) + ' ₽';
+  const plural = (n, one, few, many) => {
+    const a = n % 10, b = n % 100;
+    return a === 1 && b !== 11 ? one : a >= 2 && a <= 4 && (b < 12 || b > 14) ? few : many;
+  };
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Честный счёт */
+  const calcForm = byId('calc-form');
+  const num = id => { const el = byId(id); return clamp(Math.round(+el.value), +el.min, +el.max); };
+  let last = null, attach = false, shown = 12600, raf = 0;
+
+  function readCalc() {
+    return {
+      hours: num('c-hours'),
+      guests: num('c-guests'),
+      kids: num('c-kids'),
+      kits: num('c-kits'),
+      brooms: num('c-brooms')
+    };
+  }
+
+  function compute(s) {
+    const lines = [];
+    lines.push([`Аренда дома, ${s.hours} ${plural(s.hours, 'час', 'часа', 'часов')} × ${money(P.hour)}`, s.hours * P.hour]);
+    const extra = Math.max(0, s.guests - P.baseGuests);
+    if (extra) lines.push([`Гости сверх ${P.baseGuests}: ${extra} × ${money(P.extraGuest)} × ${s.hours} ч`, extra * P.extraGuest * s.hours]);
+    lines.push(['Травы и аромамасла для парной', P.aroma, 'must']);
+    if (s.kits) lines.push([`Комплекты × ${s.kits}`, s.kits * P.kit]);
+    if (s.brooms) lines.push([`Веники дубовые × ${s.brooms}`, s.brooms * P.broom]);
+    if (s.kids) lines.push([`Дети до 8 лет: ${s.kids}`, 0, 'free']);
+    return { lines, total: lines.reduce((sum, l) => sum + l[1], 0) };
+  }
+
+  function setTotal(n) {
+    const el = byId('bill-total');
+    cancelAnimationFrame(raf);
+    if (reduce || n === shown) { shown = n; el.textContent = money(n); return; }
+    const from = shown, t0 = performance.now(), d = 380;
+    const step = t => {
+      const k = Math.min(1, (t - t0) / d), e = 1 - Math.pow(1 - k, 3);
+      shown = Math.round(from + (n - from) * e);
+      el.textContent = money(shown);
+      if (k < 1) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+  }
+
+  function update() {
+    const s = readCalc(), r = compute(s);
+    const ul = byId('bill-lines');
+    ul.textContent = '';
+    r.lines.forEach(([name, val, cls]) => {
+      const li = document.createElement('li');
+      if (cls) li.className = cls;
+      const a = document.createElement('span'), b = document.createElement('span');
+      a.textContent = name;
+      if (cls === 'must') {
+        const tag = document.createElement('span');
+        tag.className = 'tag';
+        tag.textContent = 'обязательно';
+        a.append(tag);
+      }
+      b.textContent = cls === 'free' ? 'Бесплатно' : money(val);
+      li.append(a, b);
+      ul.append(li);
+    });
+
+    const hint = byId('bill-hint');
+    hint.textContent = s.guests + s.kids > P.seats
+      ? `В доме ${P.seats} мест — про большую компанию уточните у администратора.`
+      : `Примерно ${money(Math.round(r.total / s.guests / 10) * 10)} с каждого взрослого.`;
+
+    setTotal(r.total);
+    const parts = [`${s.hours} ${plural(s.hours, 'час', 'часа', 'часов')}`, `${s.guests} ${plural(s.guests, 'взрослый', 'взрослых', 'взрослых')}`];
+    if (s.kids) parts.push(`${s.kids} ${plural(s.kids, 'ребёнок', 'ребёнка', 'детей')} до 8 лет`);
+    if (s.kits) parts.push(`комплектов: ${s.kits}`);
+    if (s.brooms) parts.push(`веников: ${s.brooms}`);
+    last = { text: parts.join(', '), total: r.total, people: s.guests + s.kids };
+    if (attach) byId('b-calc-text').textContent = `Расчёт: ${last.text}. Примерно ${money(last.total)}`;
+  }
+
+  $$('.step button').forEach(btn => btn.addEventListener('click', () => {
+    const input = byId(btn.dataset.for);
+    input.value = clamp(Math.round(+input.value) + +btn.dataset.step, +input.min, +input.max);
+    update();
+  }));
+  calcForm.addEventListener('input', update);
+  calcForm.addEventListener('change', e => {
+    const t = e.target;
+    if (t.type === 'number') t.value = clamp(Math.round(+t.value), +t.min, +t.max);
+    update();
+  });
+  calcForm.addEventListener('submit', e => e.preventDefault());
+
+  byId('bill-book').addEventListener('click', () => {
+    attach = true;
+    byId('b-calc').hidden = false;
+    byId('b-guests').value = Math.min(last.people, +byId('b-guests').max);
+    update();
+  });
+  byId('b-calc-remove').addEventListener('click', () => {
+    attach = false;
+    byId('b-calc').hidden = true;
+  });
+
+  update();
+
+  /* Заявка на бронь (в демо не отправляется) */
+  const bForm = byId('booking-form');
+  const tSel = byId('b-time');
+  for (let h = 0; h < 24; h++) {
+    const v = String(h).padStart(2, '0') + ':00';
+    tSel.add(new Option(v, v, h === 19, h === 19));
+  }
+  try { byId('b-date').min = new Intl.DateTimeFormat('en-CA', { timeZone: CONFIG.timeZone }).format(new Date()); } catch (e) {}
+
+  bForm.addEventListener('input', e => {
+    if (e.target.getAttribute('aria-invalid') === 'true' && e.target.value.trim()) e.target.setAttribute('aria-invalid', 'false');
+  });
+
+  bForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const err = byId('b-error');
+    let first = null;
+    ['b-name', 'b-phone', 'b-date'].forEach(id => {
+      const el = byId(id);
+      const bad = !el.value.trim() || !el.checkValidity();
+      el.setAttribute('aria-invalid', bad ? 'true' : 'false');
+      if (bad && !first) first = el;
+    });
+    const consent = byId('b-consent');
+    consent.setAttribute('aria-invalid', consent.checked ? 'false' : 'true');
+    if (first || !consent.checked) {
+      err.textContent = first
+        ? 'Укажите имя, телефон и дату. Дата не может быть в прошлом.'
+        : 'Отметьте согласие на обработку данных. Без него мы не можем принять заявку.';
+      err.hidden = false;
+      (first || consent).focus();
+      return;
+    }
+    err.hidden = true;
+
+    const [y, m, d] = byId('b-date').value.split('-');
+    const lines = [
+      'Заявка на бронь — Рэд Хаус',
+      `Имя: ${byId('b-name').value.trim()}`,
+      `Телефон: ${byId('b-phone').value.trim()}`,
+      `Когда: ${d}.${m}.${y}, ${tSel.value}`,
+      `Гостей: ${byId('b-guests').value}`
+    ];
+    if (attach && last) lines.push(`Расчёт: ${last.text}. Примерно ${money(last.total)}`);
+    const comment = byId('b-comment').value.trim();
+    if (comment) lines.push(`Пожелания: ${comment}`);
+
+    bForm.hidden = true;
+    byId('b-result-text').value = lines.join('\n');
+    const box = byId('b-result');
+    box.hidden = false;
+    box.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+  });
+
+  byId('b-copy').addEventListener('click', async () => {
+    const ta = byId('b-result-text'), btn = byId('b-copy');
+    try { await navigator.clipboard.writeText(ta.value); }
+    catch (e) { ta.select(); document.execCommand('copy'); }
+    btn.textContent = 'Скопировано';
+    setTimeout(() => { btn.textContent = 'Скопировать заявку'; }, 2000);
+  });
+
+  /* Режим владельца: ?owner=1 */
+  if (new URLSearchParams(location.search).has('owner')) {
+    byId('owner').hidden = false;
+    byId('owner-close').addEventListener('click', () => { byId('owner').hidden = true; });
+  }
+})();
+</script>
+</body>
+</html>
